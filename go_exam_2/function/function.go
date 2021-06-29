@@ -28,19 +28,25 @@ func ValidateThailandCitizenID(idNo string) error {
 		if err != nil {
 			return err
 		}
-		//fmt.Println("num digit :", nd , " calculate by : ", nd * (13 - i))
+		//fmt.Println("num digit :", nd, " calculate by : ", nd*(13-i))
 		sum += nd * (13 - i)
 	}
 	//fmt.Println("total summary of num :", sum)
-	//fmt.Println("total summary of num with mod :", sum % 11)
+	//fmt.Println("total summary of num with mod :", sum%11)
 
 	ld := sum % 11
+	ldStr := ""
+
+	ld = 11 - ld
 
 	if ld > 9 {
-		ld = ld - 10
+		ldStr = fmt.Sprintf("%d", ld)
+		ldStr = ldStr[1:]
+	} else {
+		ldStr = fmt.Sprintf("%d", ld)
 	}
 
-	calIdno := fmt.Sprintf("%s%d", idNo[:12], ld)
+	calIdno := fmt.Sprintf("%s%s", idNo[:12], ldStr)
 
 	//fmt.Println("calculate identification id :", calIdno)
 	//fmt.Println("input  identification id :", idNo)
