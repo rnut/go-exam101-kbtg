@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	if err := function.ValidateThailandCitizenID("1516712728928"); err != nil {
+	if err := function.ValidateThailandCitizenID("1100500625945"); err != nil {
 		fmt.Println("error validate thai citizen id : ", err)
 		return
 	}
