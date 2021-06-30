@@ -9,8 +9,6 @@ import (
 
 type employeeService interface {
 	GetEmployeeById(ctx context.Context, empId string) ([]models.Employee, error)
-	//GetEmployeeByFirstName(firstName string)
-	//GetEmployeeByLastName(lastName string)
 }
 
 type Endpoint struct {

@@ -10,12 +10,12 @@ import (
 func ValidateThailandCitizenID(idNo string) error {
 
 	if len(idNo) != 13 {
-		return errors.New("identification no is not 13 digits")
+		return errors.New("thai citizen no is not 13 digits")
 	}
 
 	_, err := strconv.Atoi(idNo)
 	if err != nil {
-		return errors.New("identification no must be numeric only")
+		return errors.New("thai citizen no must be numeric only")
 	}
 
 	idNoSp := idNo[:12]
@@ -48,11 +48,11 @@ func ValidateThailandCitizenID(idNo string) error {
 
 	calIdno := fmt.Sprintf("%s%s", idNo[:12], ldStr)
 
-	//fmt.Println("calculate identification id :", calIdno)
-	//fmt.Println("input  identification id :", idNo)
+	fmt.Println("calculate identification id :", calIdno)
+	fmt.Println("    input identification id :", idNo)
 
 	if strings.Compare(calIdno, idNo) != 0 {
-		return errors.New("identification id mismatch")
+		return errors.New("thai citizen id mismatch")
 	}
 
 	return nil
