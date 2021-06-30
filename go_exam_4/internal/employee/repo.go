@@ -2,8 +2,8 @@ package employee
 
 import (
 	"context"
-	"go-basic-exam/go_exam_4/internal"
-	"go-basic-exam/go_exam_4/internal/models"
+	"go-exam101-kbtg/go_exam_4/internal"
+	"go-exam101-kbtg/go_exam_4/internal/models"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"

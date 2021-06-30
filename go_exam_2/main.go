@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go-basic-exam/go_exam_2/function"
+	"go-exam101-kbtg/go_exam_2/function"
 )
 
 func main() {

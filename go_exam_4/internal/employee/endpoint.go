@@ -3,8 +3,8 @@ package employee
 import (
 	"context"
 	"github.com/labstack/echo/v4"
-	"go-basic-exam/go_exam_4/internal"
-	"go-basic-exam/go_exam_4/internal/models"
+	"go-exam101-kbtg/go_exam_4/internal"
+	"go-exam101-kbtg/go_exam_4/internal/models"
 )
 
 type employeeService interface {
